@@ -1,7 +1,7 @@
 .data
     word: .asciiz "alpha   ","bravo   ","china   ","delta   ","echo    ","foxtrot ","golf    ","hotel   ","india   ","juliet  ","kilo    ","lima    ","mary    ","november","oscar   ","paper   ","quebec  ","research","sierra  ","tango   ","uniform ","victor  ","whisky  ","x-ray   ","yankee  ","zulu    "
     Word: .asciiz "Alpha   ","Bravo   ","China   ","Delta   ","Echo    ","Foxtrot ","Golf    ","Hotel   ","India   ","Juliet  ","Kilo    ","Lima    ","Mary    ","November","Oscar   ","Paper   ","Quebec  ","Research","Sierra  ","Tango   ","Uniform ","Victor  ","Whisky  ","X-ray   ","Yankee  ","Zulu    "
-    num: .asciiz "First   ","Second  ","Third   ","Fourth  ","Fifth   ","Sixth   ","Seventh ","Eighth  ","Ninth   ","Zero    "
+    num: .asciiz "Zero    ", "First   ","Second  ","Third   ","Fourth  ","Fifth   ","Sixth   ","Seventh ","Eighth  ","Ninth   "
     a_z: .word 0x61 0x7a
     A_Z: .word 0x41 0x5a
     n0_9: .word 0x30 0x39
@@ -28,7 +28,7 @@
 .text
 .globl start
 start:
-print_str ("Enter a string (max 1 length, enter ? quit): ")
+print_str ("Enter a char (max 1 length, enter ? quit): ")
 #读取字符串
 read
 move $s3, $v0
